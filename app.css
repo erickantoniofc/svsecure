@@ -1,0 +1,21 @@
+:root{
+    /* App colors */
+    --primary-color: #2F80ED;
+    --accent-color: #474747;
+    --input-color: #EDEDED;
+    --base: #FFFFFF;
+    --footer-background: #F2F2F2;
+    --green-detail: #05A30B;
+    --red-detail: #CF1212;
+
+    /* Font sizes */
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --xl: 34px;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+}
