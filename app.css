@@ -1,7 +1,7 @@
 :root{
     /* App colors */
     --primary-color: #2F80ED;
-    --accent-color: #474747;
+    --accent-color: #333333;
     --input-color: #EDEDED;
     --base: #FFFFFF;
     --footer-background: #F2F2F2;
@@ -18,4 +18,302 @@
 body {
     font-family: 'Work Sans', sans-serif;
     margin: 0;
+    background-color: var(--base);
 }
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header > img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 650px;
+    z-index: -5;  
+}
+.header > img:nth-child(2) {
+    display: none;
+}
+/* .header .image-container {
+    width: 200px;
+    height: 200px;
+}
+.header .image-container img {
+    width: 100%;
+    height: 100%;
+} */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    width: 164px;
+    height: 69px;
+    background-color: var(--footer-background);
+}
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-container .title {
+    font-size: var(--xl);
+    color: var(--base);
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+.title-container .subtitle{
+    font-size: var(--md);
+    color: var(--base);
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+}
+.primary-button {
+    width: 146px;
+    height: 46px;
+    font-family: inherit;
+    background-color: var(--accent-color);
+    border-radius: 7px;
+    border: none;
+    color: var(--base);
+    font-weight: bold;
+    cursor: pointer;
+}
+.email-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.email-container .email-input {
+    padding-left: 15px;
+    width: 280px;
+    height: 46px;
+    border-radius: 7px;
+    border: 0;
+    background-color: var(--input-color);
+    font-size: var(--sm);
+    font-family: inherit;
+    font-weight: 300;
+}
+.email-container .email-input::placeholder {
+    margin-left: 10px;
+}
+.email-container div:nth-child(2) p {
+    color: var(--base);
+    font-weight: lighter;
+    font-size: var(--sm);
+    width: 450px;
+    text-align: center;
+    margin: 0;
+}
+.header-image {
+    width: 413px;
+    margin-top: 30px;
+}
+.down-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.down-button img {
+    max-width: 29px;
+    max-height: 17px;
+}
+.courses-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 50px 50px 50px;
+    column-gap: 100px;
+    row-gap: 100px;
+}
+.course{
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.course .take-course {
+    align-self: flex-end;
+    background-color: var(--primary-color);
+    color: var(--base);
+    font-size: var(--sm);
+    font-weight: 300;
+    border-radius: 0 10px 0 0;
+    padding: 5px 20px 3px 3px;
+}
+.course:hover {
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25); 
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+.course-info {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px 30px 30px;
+}
+.course-info img {
+    align-self: center;
+    max-width: 75px;
+    max-height: 75px;
+    object-fit: cover;
+}
+.course-info p {
+    font-size: var(--sm);
+    font-weight: 400;
+}
+.course-info p:nth-child(2) {
+    font-size: var(--sm);
+    font-weight: bold;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container .start-button {
+    background-color: var(--primary-color);
+    font-size: var();
+}
+.footer-container > p:nth-child(1) {
+    max-width: 600px;
+    text-align: center;
+    margin: 20px 20px;
+}
+.faq-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+    background-color: var(--footer-background);
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+.faq {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.faq .question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid #E0E0E0;
+}
+.faq .question > p:nth-child(2) {
+    align-self: flex-end;
+}
+.faq .question > p:nth-child(3) {
+    display: none;
+}
+.exam {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.exam > div {
+    display: flex;
+    gap: 20px;
+}
+.happy, .sad {
+    background-color: var(--green-detail);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.sad {
+    background-color: var(--red-detail);
+}
+.question p:nth-child(1) {
+    text-align: left;
+    margin: 20px 0;
+}
+@media(max-width:640px){
+    .header {
+        margin: 0 20px 0 20px;
+       
+    }
+    .header > img:nth-child(1) {
+        display: none;
+    }
+    .header > img:nth-child(2) {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 346px;
+        z-index: -5;  
+    }
+    .header-image {
+        order: 3;
+        max-width: 192px;
+        max-height: 152.63px;
+        height: 152.63px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .logo {
+        order: 1;
+        margin-top: 15px;
+    }
+    .title-container{
+        order: 2;
+    }
+    .title-container .title {
+        margin-bottom: 8px;
+        margin-top: 15px;
+    }
+    .email-container {
+        order: 4;
+    }
+    .email-container div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .email-container div:nth-child(2) p {
+        color: var(--accent-color);
+        width: auto;
+    }
+
+    .email-container .primary-button {
+        width: 127px;
+        padding: 0 0 0 16px;
+    }
+
+    .email-container .primary-button p {
+        width: 85px;
+        margin: 0;
+    }
+    .down-button {
+        display: flex;
+        order: 5;
+        margin-top: 15px;
+    }
+    .faq {
+        width: 100%;
+        margin: 0 30px;
+    }
+}
+
