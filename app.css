@@ -5,7 +5,7 @@
     --input-color: #EDEDED;
     --base: #FFFFFF;
     --footer-background: #F2F2F2;
-    --green-detail: #05A30B;
+    --green-detail: #07EB10;
     --red-detail: #CF1212;
 
     /* Font sizes */
@@ -13,12 +13,14 @@
     --md: 16px;
     --lg: 18px;
     --xl: 34px;
+    --xxl: 42px;
 }
 
 body {
     font-family: 'Work Sans', sans-serif;
     margin: 0;
     background-color: var(--base);
+    color: var(--accent-color);
 }
 .header {
     display: flex;
@@ -248,6 +250,122 @@ body {
     text-align: left;
     margin: 20px 0;
 }
+.course-presentation {
+    display: flex;
+    flex-direction: column;
+    max-width: 868px;
+    height: auto;
+    border-radius: 35px;
+    background-color: var(--base);
+    overflow: hidden;
+}
+.course-presentation .course-header {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    margin: 25px 25px;
+}
+.course-presentation .course-header .close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--input-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.course-presentation .course-header .title-course {
+    max-width: 500px;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--xxl);
+}
+.download {
+    width: 38px;
+    height: 38px;
+    border-radius: 7px;
+    background-color: var(--input-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.download img {
+    width: 20px;
+    height: 22.80px;
+}
+.download-bottom {
+    display: none;
+}
+.course-presentation .course-description {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: var(--md);
+    margin-bottom: 50px;
+}
+.course-presentation .course-description p:first-child {
+    max-width: 324px;
+    text-align: center;
+}
+.course-presentation .course-description .divisor {
+    height: 150px;
+    border-left: 0.10px solid var(--accent-color);
+}
+.course-presentation .course-description ul {
+    list-style: none;
+    padding: 0;
+}
+.course-presentation .course-description ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.course-presentation .course-description ul li img {
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+}
+.course-presentation .course-footer {
+    display: flex;
+    flex-direction: column;
+    height: 135px;
+    width: 100%;
+    background-color: var(--primary-color);
+    align-self: flex-end;
+    align-items: center;
+    color: var(--base);
+}
+.course-presentation .course-footer p {
+    margin: 5px 0;
+}
+.course-presentation .course-footer span {
+    font-weight: lighter;
+    
+}
+.course-presentation .course-footer button {
+    margin-top: -23px;
+}
+.charging-bar {
+    height: 20px;
+    width: 405px;
+    background-color: var(--base);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.charging-bar .progress {
+    width: 10%;
+    height: 20px;
+    background-color: var(--green-detail);
+    overflow: hidden;
+    -webkit-animation: progress-bar 2s;
+   -moz-animation: progress-bar 2s;
+}
 @media(max-width:640px){
     .header {
         margin: 0 20px 0 20px;
@@ -315,5 +433,58 @@ body {
         width: 100%;
         margin: 0 30px;
     }
+    .course-presentation {
+        border-radius: 0;
+        height: 100vh;
+        overflow: scroll;
+        justify-content: space-between;
+    }
+    .course-presentation .course-header {
+        flex-flow: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .course-presentation .course-header .title-course {
+        margin: 10px 0;
+        font-size: var(--xl);
+        align-self: center;
+    }
+    .course-presentation .course-header .close {
+        align-self: flex-end;
+    }
+    .course-presentation .course-header .download {
+        display: none;
+    }
+    .course-presentation .course-description {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--md);
+        margin-bottom: 50px;
+    }
+    .course-presentation .course-description .divisor {
+        width: 50%;
+        height: 0;
+        border-left: 0;
+        border-bottom: 0.10px solid var(--accent-color);
+        margin: 20px 0;
+    }
+    
+    .charging-bar {
+        width: 80%;
+    }
+    .download-bottom {
+        display: flex;
+        margin-top: -43px;
+        margin-right: -215px;
+    }
+}
+@-webkit-keyframes progress-bar {
+    0% { width: 0; }
+} 
+  
+@-moz-keyframes progress-bar {
+     0% { width: 0; }
 }
 
