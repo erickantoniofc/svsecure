@@ -457,6 +457,64 @@ body {
     height: 2px;
     background-color: var(--primary-color);
 }
+.modal {
+    max-width: 870px;
+    height: 588px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    overflow: hidden;
+    padding: 25px;
+    background-color: var(--base);
+    margin: auto;
+    box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.45);
+}
+.course-test {
+    
+    
+}
+.course-test .test-content {
+    width: 550px;
+    align-self: center;
+    margin-top: 50px;
+}
+.course-test .test-content .question {
+    margin-bottom: 30px;
+}
+.course-test .test-content .question p, h1 {
+    margin: 0;
+}
+.course-test .test-content .question p {
+    font-weight: bold;
+}
+.course-test .test-content .question h1 {
+    font-weight: 500;
+}
+.course-test .answers {
+    margin-bottom: 75px;
+}
+.course-test .answers > div {
+    margin: 20px 0;
+    display: flex; 
+    gap: 20px;
+    font-weight: 300;
+}
+.course-test .answers > div input[type=radio] {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    align-self: center;
+}
+.course-test .options {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.course-test .options :nth-child(2) {
+    background-color: var(--primary-color);
+}
 @media(max-width:640px){
     .header {
         margin: 0 20px 0 20px;
@@ -595,6 +653,45 @@ body {
     }
     .option-bar .divisor {
         background-color: var(--base);
+    }
+    .modal{
+        height: 100vh;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        overflow: scroll;
+    }
+    .course-test .close {
+        margin-top: 20px;
+    }
+    .course-test .test-content {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        margin-top: 25px;
+        
+    }
+    .course-test .question {
+        padding: 0 20px;
+    }
+    .course-test .test-content .answers {
+        margin: 0 15px;
+        flex: 1;
+        padding: 0 20px;
+    }
+    .course-test .test-content .options {
+        gap: 20px;
+        width: 100vw;
+        height: 75px;
+        background-color: var(--primary-color);
+        align-items: center;
+    }
+    .course-test .options :nth-child(2) {
+        background-color: var(--base);
+        color: var(--accent-color);
     }
 
 }
