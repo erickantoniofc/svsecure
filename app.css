@@ -471,10 +471,6 @@ body {
     -webkit-box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.45);
     -moz-box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.45);
 }
-.course-test {
-    
-    
-}
 .course-test .test-content {
     width: 550px;
     align-self: center;
@@ -507,13 +503,56 @@ body {
     flex-shrink: 0;
     align-self: center;
 }
-.course-test .options {
+.course-test .options, .course-success .options {
     display: flex;
     gap: 50px;
     justify-content: center;
 }
-.course-test .options :nth-child(2) {
+.course-test .options :nth-child(2), .course-success .options :nth-child(2) {
     background-color: var(--primary-color);
+}
+.course-success {
+    align-items: center;
+}
+.course-success .close {
+    align-self: flex-start;
+}
+.course-success .success-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.course-success .success-header p {
+    margin: 0;
+}
+.course-success .success-header p, span {
+    font-weight: bold;
+}
+.course-success .success-header h1 {
+    font-weight: 300;
+    text-align: center;
+}
+.course-success .success-results {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    gap: 40px;
+}
+.course-success .success-results div {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.course-success .success-results div img {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+.course-success .options {
+    margin-bottom: 30px;
 }
 @media(max-width:640px){
     .header {
@@ -663,8 +702,8 @@ body {
         margin: 0;
         overflow: scroll;
     }
-    .course-test .close {
-        margin-top: 20px;
+    .course-test .close, .course-success .close {
+        margin: 20px 20px 0 0;
     }
     .course-test .test-content {
         display: flex;
@@ -689,11 +728,33 @@ body {
         background-color: var(--primary-color);
         align-items: center;
     }
-    .course-test .options :nth-child(2) {
+    .course-test .options :nth-child(2), .course-success .options :nth-child(2) {
         background-color: var(--base);
         color: var(--accent-color);
     }
-
+    .course-success .options {
+        flex-direction: column;
+        gap: 15px;
+        background-color: var(--primary-color);
+        width: 100vw;
+        align-items: center;
+        margin: 0;
+        padding: 15px 0;
+    }
+    .course-success .success-header, .course-success .success-results {
+        padding: 0 20px;
+    }
+    .course-success .success-results div img {
+        width: 35px;
+        height: 35px;
+    }
+    .course-success .success-results div {
+        gap: 10px;
+        font-size: 20px;
+    }
+    .course-success .close {
+        align-self: flex-end;
+    }
 }
 @-webkit-keyframes progress-bar {
     0% { width: 0; }
